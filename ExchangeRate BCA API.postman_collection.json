@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "90abf54d-0326-4f1f-842a-18fb510ba3c1",
+		"name": "ExchangeRate BCA API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:7000/api/indexing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:7000/api/indexing",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"indexing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/kurs/2019-04-09",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs/2019-01-03",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs",
+						"2019-01-03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/kurs?startdate=2019-04-10&enddate=2019-04-10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs?startdate=2019-04-10&enddate=2019-04-11",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2019-04-10"
+						},
+						{
+							"key": "enddate",
+							"value": "2019-04-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/kurs/USD?startdate=2019-04-10&enddate=2019-04-10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs/USD?startdate=2019-04-10&enddate=2019-04-10",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs",
+						"USD"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2019-04-10"
+						},
+						{
+							"key": "enddate",
+							"value": "2019-04-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/kurs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"symbol\": \"KKK\", \n\"e_rate\":\n{\n\"jual\": 123,\n\"beli\": 123.2 \n} ,\n\"tt_counter\": \n{\n\"jual\": 1703.2,\n\"beli\": 12332 \n},\n\"bank_notes\": \n{\n\"jual\": 1234.4,\n\"beli\": 123.42 \n},\n\"date\": \"2019-01-03\" \n}"
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:7000/api/kurs",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"symbol\": \"KKK\",\n    \"e_rate\": {\n        \"jual\": 1245.22,\n        \"beli\": 4562.22\n    },\n    \"tt_counter\": {\n        \"jual\": 1233.45,\n        \"beli\": 1773.55\n    },\n    \"bank_notes\": {\n        \"jual\": 1298.55,\n        \"beli\": 1773.55\n    },\n    \"date\": \"2019-01-03\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
